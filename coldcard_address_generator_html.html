@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Generate receive and change keys from xpubs for bitcoin BIP44 BIP49 BIP84</title>
+    <script src="js/coldcard_address_generator_html.js"></script>
+    <script type="module" src="js/bip32.js"></script>
+    <script type="module" src="js/bitcoinjs-lib.js"></script>
+</head>
+<body>
+    <h2>
+        Generate receive and change keys from xpubs for bitcoin BIP44 BIP49 BIP84
+    </h2>
+    This script will generate lists of addresses from your coldcard xpubs. It will generate external (receive) and internal (change) addresses.
+    You will get those values from the public.txt file that you can export from the coldcard.</br>
+    Insert a SD-Card into your coldcard, then: Advanced -> MicroSD Card ->Dump summary</br>
+    Open public.txt and get the xpubs from these sections: :</br>
+    </br>
+    ## For BIP44 / Electrum: m/44'/0'/{account}'/{change}/{idx}</br>
+    ## For BIP49 (P2WPKH-nested-in-P2SH): m/49'/0'/{account}'/{change}/{idx}</br>
+    ## For BIP84 (Native Segwit P2PKH): m/84'/0'/{account}'/{change}/{idx}</br>
+    </br></br>
+    For testing and cross-checking the keys here are for the mnemonic:</br>
+    abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about</br></br>
+    You could use <a href="https://iancoleman.io/bip39/">https://iancoleman.io/bip39/</a> for comparison. </br>
+    For BIP49 and BIP84 this tool only provides the ypub and zpub (account extended key), </br>
+    you can use <a href="https://jlopp.github.io/xpub-converter/">https://jlopp.github.io/xpub-converter/</a> to convert
+    them to xpubs (choose xpub mainnet) and paste a ypub or zpub in the field below.
+
+
+
+    </br></br>
+    Number of keys (max 1000):</br>
+    <textarea id="number" rows="1" cols="50" style="width: 50px;height: 20px;">10</textarea></br></br>
+    Paste you BIP44 xpub (m/44'/0'/0') here:</br>
+    <textarea id="xpub_44" rows="4" cols="50" style="width: 950px;height: 30px;">xpub6BosfCnifzxcFwrSzQiqu2DBVTshkCXacvNsWGYJVVhhawA7d4R5WSWGFNbi8Aw6ZRc1brxMyWMzG3DSSSSoekkudhUd9yLb6qx39T9nMdj</textarea></br></br>
+    <button class="btn" onclick="bip44();return false;">Generate addresses BIP44</button>
+    <br/><br/><br/>
+    Paste you BIP49 xpub (m/49'/0'/0') here:</br>
+    <textarea id="xpub_49" rows="4" cols="50" style="width: 950px;height: 40px;">xpub6C6nQwHaWbSrzs5tZ1q7m5R9cPK9eYpNMFesiXsYrgc1P8bvLLAet9JfHjYXKjToD8cBRswJXXbbFpXgwsswVPAZzKMa1jUp2kVkGVUaJa7</textarea></br></br>
+    <button class="btn" onclick="bip49();return false;">Generate addresses BIP49</button>
+    <br/><br/><br/>
+    Paste you BIP84 xpub (m/84'/0'/0') here:</br>
+    <textarea id="xpub_84" rows="4" cols="50" style="width: 950px;height: 40px;">xpub6CatWdiZiodmUeTDp8LT5or8nmbKNcuyvz7WyksVFkKB4RHwCD3XyuvPEbvqAQY3rAPshWcMLoP2fMFMKHPJ4ZeZXYVUhLv1VMrjPC7PW6V</textarea></br></br>
+    <button class="btn" onclick="bip84();return false;">Generate addresses BIP84</button>
+    <br/><br/><br/>
+    <pre>
+        <div id="resultdiv">
+        </div>
+    </pre>
+    <hr>
+    <div id="refs">
+        More about this software:</br>
+        <a href="https://github.com/peli-pro/coldcard_address_generator">https://github.com/peli-pro/coldcard_address_generator</a></br></br>
+        Libraries used:</br>
+        <a href="https://github.com/bitcoinjs/bitcoinjs-lib">bitcoinjs-lib https://github.com/bitcoinjs/bitcoinjs-lib</a></br>
+        <a href="https://github.com/bitcoinjs/bip32">bip32 https://github.com/bitcoinjs/bip32</a>
+    </div>
+    <hr>
+        <div id="licence">
+            Licence<br/>
+            MIT License<br/>
+            Copyright (c) 2019 peli-pro<br/>
+            Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:<br/>
+            The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.<br/>
+            THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.<br/>
+        </div>
+
+</body>
+
+</html>

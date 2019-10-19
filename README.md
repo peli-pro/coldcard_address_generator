@@ -1,6 +1,6 @@
 # Generate addresses for xpubs BIP44 BIP49 BIP84
 
-tldr: generate list of addresses from xpubs. If you like it simple jump to: https://peli-pro.github.io/coldcard_address_generator/
+__tldr__: generate list of addresses from xpubs. If you like it simple jump to: https://peli-pro.github.io/coldcard_address_generator/
 But you should only use it for testing, if you use it with your own xpub please use the standalone html or node version.
 
 

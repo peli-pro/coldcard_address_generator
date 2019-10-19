@@ -1,13 +1,28 @@
-# Generate addresses for coldcard
-This script will generate lists of addresses from your coldcard xpubs.
+# Generate addresses for xpubs BIP44 BIP49 BIP84
+
+tldr: generate list of addresses from xpubs. If you like it simple jump to: https://peli-pro.github.io/coldcard_address_generator/
+But you should only use it for testing, if you use it with your own xpub please use the standalone html or node version.
+
+
+This script will generate lists of addresses for your coldcard xpubs.
+But you can use it with any other xpubs from other wallets as well (but you might not get the xpubs you really need).  
+It is tested and developed for the coldcard.  
+If you only have a ypub / BIP49 or a zpub / BIP84 you can use <a href="https://jlopp.github.io/xpub-converter/">https://jlopp.github.io/xpub-converter/</a> to convert
+them to xpubs (choose xpub mainnet) and paste a ypub or zpub in the field below.
+
 It will generate external (receive) and internal (change) addresses.
 You will get those values from the public.txt file that you can export from the coldcard.
-It uses the bitcoinjs-lib found here: https://github.com/bitcoinjs/bitcoinjs-lib
+It uses the bitcoinjs-lib: https://github.com/bitcoinjs/bitcoinjs-lib and bip32: https://github.com/bitcoinjs/bip32
 
 BEFORE YOU TRUST THIS SCRIPT PLEASE DOUBLE CHECK THAT IT WORKS CORRECTLY, SEE THE LAST SECTION !!!!!
 
-## Get your public.txt from your coldcard
-Insert a SD-Card in your Cold-Card    
+You have 2 choices: 
+* You can use the standalone html in your browser - no need to install anything
+* you can use the javascript file with node.js and npm (if you like command line stuff)
+
+but first:  
+Get your public.txt from your coldcard
+Insert a SD-Card in your coldcard   
 ```
 Settings -> Blockchain -> Choose Bitcoin or Testnet: Bitcoin
 ```
@@ -25,16 +40,23 @@ Open public.txt and get the xpubs from these sections:
 ## For BIP84 (Native Segwit P2PKH): m/84'/0'/{account}'/{change}/{idx}
 ```
 
-## Installation
+## Standalone HTML
+Save the coldcard_address_generator_html_standalone.html file somewhere on your computer and run it locally in Firefox or Chrome.  
+No need to install anything.  
+Or just run directly from github: https://peli-pro.github.io/coldcard_address_generator/  
+
+## Node.js / command line version
+
+### Installation
 You will need to install node.js and git on your system
-### Ubuntu (tested for 18.04)
+#### Ubuntu (tested for 18.04)
 ```
 sudo apt install nodejs npm git  
 npm install bitcoinlib-js
 npm install bip32
 ```     
 
-### Windows
+#### Windows
 Install node.js from: https://nodejs.org/en/  
 Install git from: https://git-scm.com/  
 Open an elevated command prompt with admin rights:  
@@ -42,17 +64,17 @@ Open an elevated command prompt with admin rights:
 npm install bitcoinlib-js
 npm install bip32
  ```
-### Clone this repository  
+#### Clone this repository  
 ```
 git clone https://github.com/peli-pro/coldcard_address_generator
 ```
 
-### Edit coldcard_address_generator_node.js
+#### Edit coldcard_address_generator_node.js
 Edit the file `coldcard_address_generator_node.js` in the folder `coldcard_address_generator` and replace the demo xpubs in the first
 section with your xpubs from public.txt.
 If you need more than 20 addresses change the `n = 20` to a higher number.
 
-## Run
+### Run
 Run the following command in the coldcard_address_generator folder: 
 ```
 node coldcard_address_generator_node.js 

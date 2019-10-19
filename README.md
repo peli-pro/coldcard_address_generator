@@ -1,6 +1,6 @@
 # Generate addresses for coldcard
 This script will generate lists of addresses from your coldcard xpubs.
-It will generate external (recieve) and internal (change) addresses.
+It will generate external (receive) and internal (change) addresses.
 You will get those values from the public.txt file that you can export from the coldcard.
 It uses the bitcoinjs-lib found here: https://github.com/bitcoinjs/bitcoinjs-lib
 
@@ -57,7 +57,7 @@ Run the following command in the coldcard_address_generator folder:
 ```
 node coldcard_address_generator.js 
 ``` 
-This will generate recieve and change addresses.
+This will generate receive and change addresses.
 
 ## Testnet
 Testnet is not supported at this moment

@@ -42,9 +42,9 @@ child_84h_0h_0h  = bip32.fromBase58(xpub_84h_0h_0h);
 ////// Generate Addresses from xpubs
 
 /////////// BIP 44
-console.log("\n\nBIP 44 derivation m/44'/0'/0' recieve/external and change/internal addresses: ");
+console.log("\n\nBIP 44 derivation m/44'/0'/0' receive/external and change/internal addresses: ");
 console.log("Derivation from this key:", child_44h_0h_0h.toBase58())
-console.log("recieve/external addresses:");
+console.log("receive/external addresses:");
 
 for (c = 0; c <= n; c++) {
     address = bitcoin.payments.p2pkh({pubkey: child_44h_0h_0h.derive(0).derive(c).publicKey}).address;
@@ -57,10 +57,10 @@ for (c = 0; c <= n; c++) {
 }
 
 ////////// BIP49
-console.log("\n\nBIP 49 derivation m/49'/0'/0' recieve/external and change/internal addresses: ");
+console.log("\n\nBIP 49 derivation m/49'/0'/0' receive/external and change/internal addresses: ");
 console.log("Derivation from this key:", child_49h_0h_0h.toBase58())
 
-console.log("recieve/external addresses:");
+console.log("receive/external addresses:");
 for (c = 0; c <= n; c++) {
     //address = bitcoin.payments.p2pkh({pubkey: child_44h_0h_0h.derive(0).derive(c).publicKey}).address;
     address = bitcoin.payments.p2sh({
@@ -83,10 +83,10 @@ for (c = 0; c <= n; c++) {
 }
 
 //////////// BIP84
-console.log("\n\nBIP 84 derivation m/84'/0'/0' recieve/external and change/internal addresses: ");
+console.log("\n\nBIP 84 derivation m/84'/0'/0' receive/external and change/internal addresses: ");
 console.log("Derivation from this key:", child_84h_0h_0h.toBase58())
 
-console.log("recieve/external addresses:");
+console.log("receive/external addresses:");
 for (c = 0; c <= n; c++) {
     address = bitcoin.payments.p2wpkh({pubkey: child_84h_0h_0h.derive(0).derive(c).publicKey}).address;
     console.log("m/44'/0'/0'/".concat("0", "/", c, ": ", address))

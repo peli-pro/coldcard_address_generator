@@ -47,15 +47,15 @@ npm install bip32
 git clone https://github.com/peli-pro/coldcard_address_generator
 ```
 
-### Edit coldcard_address_generator.js
-Edit the file `coldcard_address_generator.js` in the folder `coldcard_address_generator` and replace the demo xpubs in the first
+### Edit coldcard_address_generator_node.js
+Edit the file `coldcard_address_generator_node.js` in the folder `coldcard_address_generator` and replace the demo xpubs in the first
 section with your xpubs from public.txt.
 If you need more than 20 addresses change the `n = 20` to a higher number.
 
 ## Run
 Run the following command in the coldcard_address_generator folder: 
 ```
-node coldcard_address_generator.js 
+node coldcard_address_generator_node.js 
 ``` 
 This will generate receive and change addresses.
 

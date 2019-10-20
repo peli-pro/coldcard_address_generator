@@ -2,23 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Generate receive and change keys from xpubs for bitcoin BIP44 BIP49 BIP84</title>
-    <script>
-
+    <title>Generate receive and change addresses from xpubs for bitcoin BIP44 BIP49 BIP84</title>
+<script>
 function bip44(){
     let xpub = document.getElementById("xpub_44").value;
-    //document.getElementById("result").value = generateList(44, txt);
     document.getElementById("resultdiv").innerHTML = generateList(44, xpub, number());
 }
 function bip49() {
     let xpub = document.getElementById("xpub_49").value;
-    //document.getElementById("result").value = generateList(49, txt);
     document.getElementById("resultdiv").innerHTML = generateList(49, xpub, number());
 }
 
 function bip84() {
     let xpub = document.getElementById("xpub_84").value;
-    //document.getElementById("result").value = generateList(84, txt);
     document.getElementById("resultdiv").innerHTML = generateList(84, xpub, number());
 }
 
@@ -61,10 +57,8 @@ function number() {
         return 50
     }
 }
-
-    </script>
-    <script>
-        (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.bip32 = f()}})(function(){var define,module,exports;return (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
+</script>
+<script>(function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.bip32 = f()}})(function(){var define,module,exports;return (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 'use strict'
 // base-x encoding / decoding
 // Copyright (c) 2018 base-x contributors
@@ -17823,10 +17817,8 @@ exports.fromPrivateKey = bip32_1.fromPrivateKey;
 
 },{"./bip32":2}]},{},[])("bip32")
 });
-
-    </script>
-    <script>
-        (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.bitcoinlib = f()}})(function(){var define,module,exports;return (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
+</script>
+<script>(function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.bitcoinlib = f()}})(function(){var define,module,exports;return (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 'use strict'
 // base-x encoding / decoding
 // Copyright (c) 2018 base-x contributors
@@ -20308,13 +20300,13 @@ module.exports={
   "OP_CHECKMULTISIGVERIFY": 175,
 
   "OP_NOP1": 176,
-
+  
   "OP_NOP2": 177,
   "OP_CHECKLOCKTIMEVERIFY": 177,
 
   "OP_NOP3": 178,
   "OP_CHECKSEQUENCEVERIFY": 178,
-
+  
   "OP_NOP4": 179,
   "OP_NOP5": 180,
   "OP_NOP6": 181,
@@ -42980,12 +42972,11 @@ exports.TransactionBuilder = transaction_builder_1.TransactionBuilder;
 
 },{"./address":32,"./block":33,"./crypto":36,"./ecpair":37,"./networks":38,"./payments":40,"./psbt":48,"./script":49,"./transaction":73,"./transaction_builder":74,"bip32":28}]},{},[])("bitcoinjs-lib")
 });
-
-    </script>
+</script>
 </head>
 <body>
     <h2>
-        Generate receive and change keys from xpubs for bitcoin BIP44 BIP49 BIP84
+        Generate receive and change addresses from xpubs for bitcoin BIP44 BIP49 BIP84
     </h2>
     This script will generate lists of addresses from your coldcard xpubs. It will generate external (receive) and internal (change) addresses.
     You will get those values from the public.txt file that you can export from the coldcard.</br>
@@ -42996,7 +42987,7 @@ exports.TransactionBuilder = transaction_builder_1.TransactionBuilder;
     ## For BIP49 (P2WPKH-nested-in-P2SH): m/49'/0'/{account}'/{change}/{idx}</br>
     ## For BIP84 (Native Segwit P2PKH): m/84'/0'/{account}'/{change}/{idx}</br>
     </br></br>
-    For testing and cross-checking the keys here are for the mnemonic:</br>
+    For testing and cross-checking the addresses here are for the mnemonic:</br>
     abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about</br></br>
     You could use <a href="https://iancoleman.io/bip39/">https://iancoleman.io/bip39/</a> for comparison. </br>
     For BIP49 and BIP84 this tool only provides the ypub and zpub (account extended key), </br>
@@ -43006,7 +42997,7 @@ exports.TransactionBuilder = transaction_builder_1.TransactionBuilder;
 
 
     </br></br>
-    Number of keys (max 1000):</br>
+    Number of addresses (max 1000):</br>
     <textarea id="number" rows="1" cols="50" style="width: 50px;height: 20px;">10</textarea></br></br>
     Paste you BIP44 xpub (m/44'/0'/0') here:</br>
     <textarea id="xpub_44" rows="4" cols="50" style="width: 950px;height: 30px;">xpub6BosfCnifzxcFwrSzQiqu2DBVTshkCXacvNsWGYJVVhhawA7d4R5WSWGFNbi8Aw6ZRc1brxMyWMzG3DSSSSoekkudhUd9yLb6qx39T9nMdj</textarea></br></br>

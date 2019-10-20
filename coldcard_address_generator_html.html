@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Generate receive and change keys from xpubs for bitcoin BIP44 BIP49 BIP84</title>
+    <title>Generate receive and change addresses from xpubs for bitcoin BIP44 BIP49 BIP84</title>
     <script src="js/coldcard_address_generator_html.js"></script>
     <script type="module" src="js/bip32.js"></script>
     <script type="module" src="js/bitcoinjs-lib.js"></script>
 </head>
 <body>
     <h2>
-        Generate receive and change keys from xpubs for bitcoin BIP44 BIP49 BIP84
+        Generate receive and change addresses from xpubs for bitcoin BIP44 BIP49 BIP84
     </h2>
     This script will generate lists of addresses from your coldcard xpubs. It will generate external (receive) and internal (change) addresses.
     You will get those values from the public.txt file that you can export from the coldcard.</br>
@@ -20,7 +20,7 @@
     ## For BIP49 (P2WPKH-nested-in-P2SH): m/49'/0'/{account}'/{change}/{idx}</br>
     ## For BIP84 (Native Segwit P2PKH): m/84'/0'/{account}'/{change}/{idx}</br>
     </br></br>
-    For testing and cross-checking the keys here are for the mnemonic:</br>
+    For testing and cross-checking the addresses here are for the mnemonic:</br>
     abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about</br></br>
     You could use <a href="https://iancoleman.io/bip39/">https://iancoleman.io/bip39/</a> for comparison. </br>
     For BIP49 and BIP84 this tool only provides the ypub and zpub (account extended key), </br>
@@ -30,7 +30,7 @@
 
 
     </br></br>
-    Number of keys (max 1000):</br>
+    Number of addresses (max 1000):</br>
     <textarea id="number" rows="1" cols="50" style="width: 50px;height: 20px;">10</textarea></br></br>
     Paste you BIP44 xpub (m/44'/0'/0') here:</br>
     <textarea id="xpub_44" rows="4" cols="50" style="width: 950px;height: 30px;">xpub6BosfCnifzxcFwrSzQiqu2DBVTshkCXacvNsWGYJVVhhawA7d4R5WSWGFNbi8Aw6ZRc1brxMyWMzG3DSSSSoekkudhUd9yLb6qx39T9nMdj</textarea></br></br>

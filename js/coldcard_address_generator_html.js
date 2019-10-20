@@ -1,18 +1,15 @@
 
 function bip44(){
     let xpub = document.getElementById("xpub_44").value;
-    //document.getElementById("result").value = generateList(44, txt);
     document.getElementById("resultdiv").innerHTML = generateList(44, xpub, number());
 }
 function bip49() {
     let xpub = document.getElementById("xpub_49").value;
-    //document.getElementById("result").value = generateList(49, txt);
     document.getElementById("resultdiv").innerHTML = generateList(49, xpub, number());
 }
 
 function bip84() {
     let xpub = document.getElementById("xpub_84").value;
-    //document.getElementById("result").value = generateList(84, txt);
     document.getElementById("resultdiv").innerHTML = generateList(84, xpub, number());
 }
 
